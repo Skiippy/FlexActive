@@ -2,10 +2,10 @@
 session_start();
 
 // Set Variables
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'fitness';
+$host = 'sql106.infinityfree.com';
+$username = 'if0_36862596';
+$password = 'FlexActiveAdmin';
+$database = 'if0_36862596_fitness';
 
 // Link to Database
 $conn = mysqli_connect($host, $username, $password, $database);

@@ -11,10 +11,10 @@ if (!isset($_SESSION['emailVar'])) {
 }
 
 // Database Setup
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'fitness';
+$host = 'sql106.infinityfree.com';
+$username = 'if0_36862596';
+$password = 'FlexActiveAdmin';
+$database = 'if0_36862596_fitness';
 
 // Connect to the database
 $conn = mysqli_connect($host, $username, $password, $database);

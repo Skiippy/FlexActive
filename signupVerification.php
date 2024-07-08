@@ -5,10 +5,10 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $encryptedPassword = md5($password);
 // Set Variables
-$host = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbname = 'fitness';
+$host = 'sql106.infinityfree.com';
+$dbUsername = 'if0_36862596';
+$dbPassword = 'FlexActiveAdmin';
+$dbname = 'if0_36862596_fitness';
 // Link to Database
 $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 // Error Message if Connection Fails
