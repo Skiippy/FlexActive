@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Link CSS to HTML-->
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUp</title>
+</head>
+
+<body>
+    <!--Layout of Form-->
+    <nav>
+        <div class="logo">
+            <h1>Flex Active</h1>
+        </div>
+    </nav>
+
+    <!--Layout for Form-->
+    <div class="card">
+        <div class="formdiv">
+            <h1>Signup</h1>
+            <form action="signupVerification.php" method="post">
+                <!--Name Field-->
+                <div class="input">
+                    <input type="text" required name="name">
+                    <label>Name</label>
+                </div>
+                <!--Email Field-->
+                <div class="input">
+                    <input type="email" required name="email">
+                    <label>Email</label>
+                </div>
+                <!--Password Field-->
+                <div class="input">
+                    <!--Ensure there is atleast One Number, One Lowercasse, One Uppercase and Eight or More Characters-->
+                    <input type="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Your Password must contain at least 8 Characters, 1 Uppercase Letter, 1 Lowercase Letter and atleast 1 Number">
+                    <label>Password</label>
+                </div>
+                <!--Signup Button-->
+                <input type="submit" class="btnSignup">
+                <!--Already Have an Account Button-->
+                <div class="register-login">
+                    <p>Already have an account? <a href="#" onclick="login()">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!--Script for Changing Page to Login Page-->
+    <script>
+        function login() {
+            window.location.assign("index.html");
+        }
+    </script>
+</body>
+</html>

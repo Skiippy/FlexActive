@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previous Entries</title>
+  <link rel="stylesheet" href="entries.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Previous Entries</h1>
+
+    <!-- BMR Entries Section -->
+    <div id="bmr-entries">
+      <h2>BMR Entries</h2>
+      <a href="bmr.html">Back to BMR Calculator</a>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Age</th>
+            <th>Height (cm)</th>
+            <th>Weight (kg)</th>
+            <th>Gender</th>
+            <th>BMR (kcal/day)</th>
+          </tr>
+        </thead>
+        <tbody id="bmr-entries-body">
+          <!-- BMR entries will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BMI Entries Section -->
+    <div id="bmi-entries">
+      <h2>BMI Entries</h2>
+      <a href="bmi.html">Back to BMI Calculator</a>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Age</th>
+            <th>Height (cm)</th>
+            <th>Weight (kg)</th>
+            <th>Gender</th>
+            <th>BMI</th>
+          </tr>
+        </thead>
+        <tbody id="bmi-entries-body">
+          <!-- BMI entries will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <a href="landing.html">Back Home</a>
+  </div>
+
+  <!-- JavaScript for fetching and displaying data -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const email = localStorage.getItem('email');
+
+      fetch(`fetchBMREntries.php?email=${email}`)
+        .then(response => response.json())
+        .then(data => {
+          const bmrEntriesBody = document.getElementById('bmr-entries-body');
+          bmrEntriesBody.innerHTML = '';
+
+          if (data.success) {
+            data.entries.forEach(entry => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${entry.created_at}</td>
+                <td>${entry.age}</td>
+                <td>${entry.height}</td>
+                <td>${entry.weight}</td>
+                <td>${entry.gender}</td>
+                <td>${parseFloat(entry.bmr).toFixed(2)}</td>
+              `;
+              bmrEntriesBody.appendChild(row);
+            });
+          } else {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td colspan="6">No BMR entries found.</td>`;
+            bmrEntriesBody.appendChild(row);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching BMR data:', error);
+          alert('An error occurred while fetching BMR data.');
+        });
+
+      fetch(`fetchBMIEntries.php?email=${email}`)
+        .then(response => response.json())
+        .then(data => {
+          const bmiEntriesBody = document.getElementById('bmi-entries-body');
+          bmiEntriesBody.innerHTML = '';
+
+          if (data.success) {
+            data.entries.forEach(entry => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${entry.created_at}</td>
+                <td>${entry.age}</td>
+                <td>${entry.height}</td>
+                <td>${entry.weight}</td>
+                <td>${entry.gender}</td>
+                <td>${parseFloat(entry.bmi).toFixed(2)}</td>
+              `;
+              bmiEntriesBody.appendChild(row);
+            });
+          } else {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td colspan="6">No BMI entries found.</td>`;
+            bmiEntriesBody.appendChild(row);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching BMI data:', error);
+          alert('An error occurred while fetching BMI data.');
+        });
+    });
+  </script>
+</body>
+</html>

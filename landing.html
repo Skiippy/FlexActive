@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#" class="logo">F<B>A</B>.</a>
+        <div class="toggle" onclick="navToggle();"></div>
+        <ol>
+            <li><a href="#home" onclick="navToggle();">home</a></li>
+            <li><a href="#about" onclick="navToggle();">about</a></li>
+            <li><a href="#workouts" onclick="navToggle();">workouts</a></li>
+            <li><a href="#calculators" onclick="navToggle();">calculators</a></li>
+            <li><a href="#diet" onclick="navToggle();">diet</a></li>
+            <li><a href="#contact" onclick="navToggle();">contact</a></li>
+        </ol>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="home view">
+        <div class="highlights">
+            <h3>feel the power with</h3>
+            <h1><b>FLEX</b>ACTIVE</h1><br>
+            <p class="tagline">
+                Fitness Made Simple, Results Made Real.
+            </p>
+        </div>
+        <div class="banner"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about view">
+        <div class="main">
+            <h2><span>A</span>bout Us</h2>
+            <h6>Learn more about our mission and values</h6>
+        </div>
+        <div class="content">
+            <div class="cols">
+                <p>Welcome to our fitness website, your ultimate destination for comprehensive workout routines,
+                    nutrition tips, and fitness guidance. Our mission is to empower individuals of all fitness levels to
+                    achieve their health and wellness goals through accessible and effective workout plans. We believe
+                    in the transformative power of fitness and strive to create a supportive community where everyone
+                    can find the resources and motivation they need to lead a healthier, more active lifestyle.</p>
+                <p><br>Our team of fitness enthusiasts and experts are dedicated to providing high-quality content that
+                    is both informative and inspiring. From detailed workout routines for different muscle groups to
+                    practical nutrition advice and delicious healthy recipes, we cover all aspects of fitness to help
+                    you on your journey. Whether you're a beginner looking to get started or an experienced athlete
+                    seeking new challenges, our goal is to support you every step of the way. Join us and take the first
+                    step towards a stronger, fitter, and happier you!</p>
+            </div>
+            <div class="cols">
+                <div class="box">
+                    <img src="about.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workouts Section -->
+    <section id="workouts" class="workouts view">
+        <div class="main">
+            <h2>W<span>orkout</span></h2>
+            <h6>Explore our variety of workout routines to build strength, endurance, and flexibility.</h6>
+        </div>
+        <div class="content">
+            <div class="frame">
+                <div class="box">
+                    <a href="push.html">
+                        <img src="push.jpg" alt="">
+                    </a>
+                </div>
+                <div class="title">Push Workout</div>
+                <p>Enhance your upper body strength with our effective push workout routines, designed to target chest,
+                    shoulders, and triceps.</p>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <a href="pull.html">
+                        <img src="pull.jpg" alt="">
+                    </a>
+                </div>
+                <div class="title">Pull Workout</div>
+                <p>Build a stronger back and biceps with our comprehensive pull workout plans, focusing on exercises
+                    like rows, pull-ups, and more.</p>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <a href="legs.html">
+                        <img src="legs.jpg" alt="">
+                    </a>
+                </div>
+                <div class="title">Legs Workout</div>
+                <p>Develop powerful lower body muscles with our legs workout routines, including squats, lunges, and
+                    calf raises for strength and endurance.</p>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <a href="abs.html">
+                        <img src="abs.jpg" alt="">
+                    </a>
+                </div>
+                <div class="title">Abs Workout</div>
+                <p>Sculpt and tone your core with our effective abs workout plans, featuring exercises like crunches,
+                    planks, and leg raises for a strong midsection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Calculators Section -->
+    <section id="calculators" class="calculators view">
+        <div class="main">
+            <h2><span>F</span>itness Calculators</h2>
+            <h6>Discover essential tools to track your fitness journey and achieve your health goals.</h6>
+        </div>
+        <div class="content">
+            <div class="frame">
+                <div class="box">
+                    <img src="bmi.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">BMI Calculator</div>
+                </div>
+                <p>Calculate your Body Mass Index (BMI) to understand your current body weight category and make
+                    informed decisions about your health and fitness plan.</p>
+                <a href="bmi.html">Explore</a>
+            </div>
+
+            <div class="frame">
+                <div class="box">
+                    <img src="bmr.jpg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="title">BMR Calculator</div>
+                </div>
+                <p>Determine your Basal Metabolic Rate (BMR) to know the number of calories your body needs at rest,
+                    helping you to plan your diet and exercise routines effectively.</p>
+                <a href="bmr.html">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diet Section -->
+    <section id="diet" class="diet view">
+        <div class="main">
+            <h2><span>D</span>iets</h2>
+            <h6>Explore a variety of diet plans tailored to meet your nutritional needs and fitness goals.</h6>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="cols a">
+                    <div class="heading">Yogurt Power Bowl</div>
+                    <p>
+                        <b>MACROS</b><br>
+                        - Whole Recipe:<br>
+                        • Calories 352<br>
+                        • Carbs 35<br>
+                        • Protein 34<br>
+                        • Fats 11<br><br>
+                        <b>Ingredients:</b><br>
+                        - 300 g skyr or 0.2% fat greek yogurt<br>
+                        - 50 g blueberries<br>
+                        - 100 g strawberries<br>
+                        - 10 g honey<br>
+                        - 15 g walnuts<br><br>
+                        <b>Directions:</b><br>
+                        1. Cut strawberries into bite-size pieces.<br>
+                        2. In a bowl, add yogurt, berries, and honey. Mix well.<br>
+                        3. Chop or break walnuts and sprinkle on top. Done!
+                    </p>
+                </div>
+                <div class="cols b">
+                    <div class="boxes">
+                        <img src="yogurtpowerbowl.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cols a">
+                    <div class="heading">Egg Fried Rice</div>
+                    <p>
+                        <b>MACROS</b><br>
+                        - Whole Recipe:<br>
+                        • Calories 627<br>
+                        • Carbs 68<br>
+                        • Protein 58<br>
+                        • Fats 14<br><br>
+                        <b>Ingredients:</b><br>
+                        - 1 chicken breast or 180 g<br>
+                        - 50 g raw rice<br>
+                        - 1 egg<br>
+                        - 1 red bell pepper or 150 g<br>
+                        - 1 medium onion or 50 g<br>
+                        - 1 carrot or 100 g<br>
+                        - 50 g peas<br>
+                        - 1 clove of garlic<br>
+                        - 1 piece of fresh ginger (thumbsize)<br>
+                        - 25 g soy sauce<br>
+                        - 4 g oil<br>
+                        - Black pepper<br>
+                        <b>Instructions:</b><br>
+                        1. Rinse rice under cold water. In a pot (18cm/7in), add rice, 125g water, and a pinch of
+                        salt.<br>
+                        2. Boil on high heat, then reduce to low, cover, and simmer for 12-15 minutes.<br>
+                        3. Cut chicken, onion, pepper, and carrot into bite-size pieces.<br>
+                        4. Heat a pan to medium-high, add 2g oil, and fry chicken for 60 seconds on each side. Remove
+                        chicken.<br>
+                        5. Add another 2g oil to the pan. Fry carrot, onion, and pepper for 3-5 minutes.<br>
+                        6. Add garlic and ginger, fry for 20 seconds.<br>
+                        7. Add cooked rice, stir, and fry for 1-2 minutes.
+                        8. Add egg, stir, and fry for 1 minute.<br>
+                        9. Add peas and black pepper, mix well.<br>
+                        10. Return chicken to the pan with soy sauce, fry for 30 seconds. Done!
+                    </p>
+                </div>
+                <div class="cols b">
+                    <div class="boxes">
+                        <img src="eggfriedrice.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cols a">
+                    <div class="heading">BUTTER CHICKEN</div>
+                    <p>
+                        <b>MACROS</b><br>
+                        - Whole Recipe:<br>
+                        • Calories 583<br>
+                        • Carbs 40<br>
+                        • Protein 59<br>
+                        • Fats 18<br><br>
+                        <b>Ingredients:</b><br>
+                        - 200 g skinless, boneless chicken thighs<br>
+                        - 1 medium onion or 50 g<br>
+                        - 2 cloves of garlic<br>
+                        - 200 g crushed tomatoes<br>
+                        - 100 g 3 % fat evaporated mik<br>
+                        - 1 laughing cow wedge<br>
+                        - 50 g skyr or 0.2 % fat greek yogurt<br>
+                        - 4 g garam masala<br>
+                        - 2 g garlic powder<br>
+                        - 2 g paprika<br>
+                        - 2 g turmeric<br>
+                        - 21g cayenne pepper<br>
+                        - 4 g oil<br>
+                        - Salt and black pepper<br><br>
+                        <b>Directions:</b><br>
+                        1. Cut chicken into bite-size pieces and place in a bowl.<br>
+                        2. Add Greek yogurt, 2g garam masala, and a pinch of salt to the chicken. Mix until coated.<br>
+                        3. Dice onions and grate garlic.<br>
+                        4. Heat 2g of oil in a 24cm pan over high heat. Add chicken and fry for 1 minute on each side
+                        until browned. Remove chicken from the pan.<br>
+                        5. Add another 2g of oil to the pan, reduce heat to medium, add onions, and fry for 3 minutes
+                        until brown.<br>
+                        6. Add 2g garam masala, garlic powder, paprika, turmeric, cayenne pepper, and black pepper.
+                        Toast for 30 seconds.<br>
+                        7. Move ingredients to the side, add grated garlic, and fry for 20 seconds.<br>
+                        8. Add crushed tomatoes and a splash of water. Simmer for 5-6 minutes.<br>
+                        9. Add evaporated milk and Laughing Cow cheese. Stir until the cheese melts and is
+                        incorporated.<br>
+                        10. Return chicken to the pan and simmer for 5-7 minutes until cooked through. Done.
+                    </p>
+                </div>
+                <div class="cols b">
+                    <div class="boxes">
+                        <img src="butterchicken.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="cols a">
+                    <div class="heading">Peanut Butter and Chocolate Oatbars</div>
+                    <p>
+                        <b>MACROS</b><br>
+                        - One Oatbar:<br>
+                        • Calories 205<br>
+                        • Carbs 20<br>
+                        • Protein 15<br>
+                        • Fats 7<br><br>
+                        <b>Ingredients:</b><br>
+                        - 150 g oats<br>
+                        - 30 g cocoa powder<br>
+                        - 50 g peanut butter<br>
+                        - 60 g casein vanilla protein powder <br>
+                        - 150 g skimmed milk<br>
+                        - 30 - 50 g water<br>
+                        - Pinch salt<br>
+                        <b>Instructions:</b><br>
+                        1. Place a bowl on a scale and add all dry ingredients. Mix well.<br>
+                        2. Add peanut butter or 60g of powdered peanuts.<br>
+                        3. Add milk and combine with a spatula until thick and creamy. If too dry, add 30g of water and
+                        stir.<br>
+                        4. Place parchment paper on an 8x22cm (3x9 inch) baking tray.<br>
+                        5. Transfer mixture onto the baking sheet.<br>
+                        6. Cool on a plate for 20 minutes.<br>
+                        7. Toss to combine and serve chilled. <br>
+                        8. Cut into 6 bars. Store in the fridge for 2-3 days.
+                    </p>
+                </div>
+                <div class="cols b">
+                    <div class="boxes">
+                        <img src="peanutbutterandchocolateoatbars.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact view">
+        <div class="main">
+            <h2><span>C</span>ontact:</h2>
+            <h6>Feel free to reach out to us via the form below or email us directly at flexactivecommunity@gmail.com.
+                We look forward to hearing from you!</h6>
+        </div>
+        <div class="content">
+            <!-- Contact form -->
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" , placeholder="User" , id="user">
+                <input type="email" , placeholder="Email" , id="email">
+                <textarea rows="5" placeholder="what's on your mind" , id="text"></textarea>
+                <br>
+                <input type="submit" value="send" class="btn">
+            </form>
+            <div class="bgimg"></div>
+        </div>
+    </section>
+
+    <!-- Copyright Section -->
+    <section class="copyright">
+        &copy; copyright Sean Anderson 2024 | All Rights Reserved
+    </section>
+
+    <!-- JavaScript for Navbar and Email Sending -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle("sticky", window.scrollY > 50);
+        });
+
+        const togglebar = document.querySelector('.toggle');
+        const menu = document.querySelector('ol');
+
+        function navToggle() {
+            togglebar.classList.toggle("active");
+            menu.classList.toggle("active");
+        };
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "flexactivecommunity@gmail.com",
+                Password: "4F050D36ECC2648AD4BE61723CDE0DC7C3BD",
+                To: 'flexactivecommunity@gmail.com',
+                From: "flexactivecommunity@gmail.com",
+                Subject: "This is the subject",
+                Body: "You have a new Message from the Flex Active Website!:<br><br>"
+                    + "Name: " + document.getElementById("user").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Message: " + document.getElementById("text").value
+            }).then(
+                message => alert("message sent successfully")
+            );
+        }
+    </script>
+</body>
+</html>

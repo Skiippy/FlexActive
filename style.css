@@ -1,0 +1,697 @@
+/* Importing Google Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Global styles for all elements */
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    color: #EEEEEE;
+    scroll-behavior: smooth;
+}
+
+/* Setting colour variable */
+:root {
+    --prime: #76ABAE;
+}
+
+/* General styling for the entire body */
+body {
+    background-color: #222831;
+    overflow-x: hidden;
+}
+
+/* Navigation bar styles */
+.navbar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 30px 120px;
+    background-color: transparent;
+    justify-content: space-between;
+    z-index: 1111;
+    transition: 0.5s ease;
+}
+
+.navbar.sticky {
+    padding: 6px 60px;
+    background: #31363F;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.sticky .logo {
+    font-size: 2em;
+    color: var(--prime);
+}
+
+.navbar.sticky .logo B {
+    color: #EEEEEE;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 2.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo B {
+    color: var(--prime);
+}
+
+ol {
+    display: flex;
+    margin: auto 0;
+}
+
+ol li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+ol li a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ol li:hover a {
+    color: var(--prime);
+}
+
+/* View section styles */
+.view {
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+}
+
+/* Home section styles */
+.home {
+    display: flex;
+    min-height: 120vh;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%, 0 100%);
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+}
+
+/* Highlighted content section styles */
+.highlights {
+    width: 70%;
+    position: relative;
+    display: inline-block;
+    z-index: 11;
+}
+
+.highlights h3 {
+    display: inline;
+    font-size: 2vw;
+    padding: 5px 20px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-left: 6px solid var(--prime);
+}
+
+.highlights h1 {
+    font-size: 9vw;
+    text-align: center;
+    font-weight: normal;
+}
+
+.highlights b {
+    color: var(--prime);
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.highlights .tagline {
+    color: #d7d7d7;
+    font-size: 1.8vw;
+    text-align: center;
+    font-weight: normal;
+}
+
+.highlights .join {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    padding: 5px 20px;
+    font-size: 1.5vw;
+    margin-top: 1.2em;
+    color: var(--prime);
+    border: 2px solid var(--prime);
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.highlights .join:hover {
+    color: #EEEEEE;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    background: var(--prime);
+}
+
+/* Main content section styles */
+.main {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main h2 {
+    font-size: 2.5vw;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+}
+
+/* Span text styles */
+span {
+    color: var(--prime);
+}
+
+/* Main section heading underline styles */
+.main h2:before {
+    position: absolute;
+    content: '';
+    background: var(--prime);
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+}
+
+.main h6 {
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+/* Content section styles */
+.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: center;
+}
+
+/* About section content styles */
+.about .content .cols {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+}
+
+.about .content .cols p b {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.about .content .cols a {
+    position: relative;
+    top: 20px;
+    color: #EEEEEE;
+    background: var(--prime);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.about .content .cols a:hover {
+    color: #000;
+    background: #EEEEEE;
+}
+
+.about .content .cols .box {
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about .content .cols .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Workouts section content styles */
+.workouts .content {
+    flex-wrap: wrap;
+}
+
+.workouts .content .frame {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    background: #222;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.workouts .content .frame .box {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.workouts .content .frame .box img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 0.2s ease-in;
+}
+
+.workouts .content .frame .box:hover img {
+    filter: brightness(100%);
+    transform: scale(1.08);
+}
+
+.workouts .content .frame .title {
+    color: var(--prime);
+    padding: 5px 0;
+}
+
+.workouts .content .frame p {
+    font-size: 0.8em;
+}
+
+/* Calculators section content styles */
+.calculators .content {
+    flex-wrap: wrap;
+}
+
+.calculators .content .frame {
+    position: relative;
+    width: 500px;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    background: #222;
+}
+
+.calculators .content .frame .box {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.calculators .content .frame .box img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: 0.2s ease-in;
+}
+
+.calculators .content .frame .box:hover img {
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+
+.calculators .content .frame .headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.calculators .content .frame .headline i {
+    height: 22px;
+    width: 22px;
+    border: 1.5px solid #EEEEEE;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    line-height: 22px;
+}
+
+.calculators .content .frame .headline i:hover {
+    border: 1.5px solid var(--prime);
+    background: var(--prime);
+}
+
+.calculators .content .frame .headline .title {
+    color: var(--prime);
+    font-size: 1.2em;
+}
+
+.calculators .content .frame p {
+    font-size: 0.8em;
+    position: relative;
+    bottom: 5px;
+}
+
+.calculators .content .frame a {
+    top: 20px;
+    color: var(--prime);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+.calculators .content .frame a:hover {
+    color: #EEEEEE;
+    background: var(--prime);
+}
+
+/* Diet section content styles */
+.diet .content {
+    flex-direction: column;
+}
+
+.diet .content .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.diet .content .row:nth-child(odd) .a {
+    order: 2;
+}
+
+.diet .content .row .cols {
+    position: relative;
+    width: 600px;
+    padding: 20px 50px;
+}
+
+.diet .content .row .cols .heading {
+    font-size: 2em;
+    color: #76ABAE;
+    text-transform: capitalize;
+}
+
+.diet .content .row .cols .boxes {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #EEEEEE;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.diet .content .row .cols .boxes img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Contact section content styles */
+.contact .content {
+    min-height: 100vh;
+}
+
+.contact .content form {
+    margin: auto 0;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: #EEEEEE;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contact .content form input {
+    color: #222;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    margin: 15px 0;
+    background: transparent;
+}
+
+.contact .content form textarea {
+    width: 100%;
+    padding: 10px;
+    color: #222;
+    font-size: 18px;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    margin: 15px 0;
+    background: transparent;
+}
+
+.contact .content form input:focus,
+.contact .content form textarea:focus {
+    border: 2px solid var(--prime);
+    transition: 0.1s ease;
+}
+
+.contact .content form .btn {
+    letter-spacing: 1px;
+    width: 100px;
+    display: inline-block;
+    color: var(--prime);
+    border-color: var(--prime);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.contact .content .bgimg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(bgimg.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(20%);
+}
+
+/* Copyright section content styles */
+.copyright {
+    text-transform: capitalize;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    background: #222;
+    text-align: center;
+    font-size: 18px;
+}
+
+.copyright a {
+    color: var(--prime);
+    text-decoration: none;
+    margin: 0 2px;
+    font-weight: lighter;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Exercise section content styles */
+.exercise {
+    background: #EEEEEE;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exercise h2 {
+    color: #333;
+}
+
+.exercise img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.exercise p {
+    color: #666;
+}
+
+.exercise strong {
+    color: #333;
+}
+
+/* Responsive media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 60px;
+    }
+
+    .navbar ol {
+        display: none;
+    }
+
+    .navbar ol.active {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background: #222;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 60px);
+    }
+
+    .navbar ol.active li {
+        margin: 8px;
+    }
+
+    .navbar ol.active li a {
+        font-size: 25px;
+    }
+
+    .navbar .toggle {
+        height: 25px;
+        width: 25px;
+        margin: auto 0;
+        cursor: pointer;
+        background: url(menubar.png);
+        background-size: 25px;
+        background-position: center;
+        filter: invert(1);
+        background-repeat: no-repeat;
+    }
+
+    .navbar .toggle.active {
+        background: url(close.png);
+        background-size: 40px;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+    }
+
+    .highlights h3 {
+        font-size: 3vw;
+        padding: 5px 10px;
+        border-left: 3px solid var(--prime);
+    }
+
+    .highlights h1 {
+        font-size: 12vw;
+    }
+
+    .highlights .tagline {
+        color: #d7d7d7;
+        font-size: 2.8vw;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .highlights .join {
+        font-size: 1.8vw;
+        border: 1px solid var(--prime);
+    }
+
+    .main h2 {
+        font-size: 1.5rem;
+    }
+
+    .main h6 {
+        font-size: 13px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .workout .content .frame {
+        width: 260px;
+        padding: 18px;
+    }
+
+    .exercise img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .calculators .content .frame {
+        width: 350px;
+        padding: 15px 15px 40px 15px;
+        margin: 10px 5px;
+    }
+
+    .calculators .content .frame .box {
+        height: 200px;
+    }
+
+    .calculators .content .frame a {
+        border: 1.5px solid var(--prime);
+        padding: 3px 15px;
+    }
+
+    .diet .content .row {
+        flex-direction: column;
+    }
+
+    .diet .content .row .cols {
+        width: 100%;
+    }
+
+    .diet .content .row.row:nth-child(odd) .a {
+        order: 0;
+    }
+
+    .diet .content .row .cols .heading {
+        font-size: 1.5em;
+    }
+
+    .diet .content .rows .cols p {
+        font-size: 13px;
+    }
+
+    .diet .content .row .cols .boxes {
+        width: 90%;
+        margin: auto;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Link CSS to HTML-->
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="logo">
+            <h1>Flex Active</h1>
+        </div>
+    </nav>
+
+    <!--Layout for Form-->
+    <div class="card">
+        <div class="formdiv">
+            <h1>Login</h1>
+            <form action="loginVerification.php" method="post" id="form">
+                <!--Email Field-->
+                <div class="input">
+                    <input type="email" onfocus="clearInput(this)" required name="email" id="email">
+                    <label>Email</label>
+                </div>
+                <!--Password Field-->
+                <div class="input">
+                    <input type="password" required name="password" id="password">
+                    <label>Password</label>
+                </div>
+                <!--Login Button-->
+                <input type="submit" value="Login" class="btnlogin" name="login">
+                <!--Register Link-->
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" onclick="signup()">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!--Save Email to Local Storage-->
+    <script>
+        const form = document.getElementById('form');
+        const email = document.getElementById('email');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const emailValue = email.value;
+            localStorage.setItem('email', emailValue);
+
+            form.submit();
+        });
+    </script>
+
+    <!--Script for changing page to the Reigster Page-->
+    <script>
+        function signup() {
+            window.location.assign("signup.html");
+        }
+    </script>
+</body>
+</html>
